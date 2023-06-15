@@ -18,6 +18,12 @@
             <option value="$PROJECT_DIR$/Tasklist/task/build/tmp" />
             <option value="$PROJECT_DIR$/Topics/For loop and arrays/Is it here" />
             <option value="$PROJECT_DIR$/Topics/For loop and arrays/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Kotlinx datetime library/DateTimePeriod class" />
+            <option value="$PROJECT_DIR$/Topics/Kotlinx datetime library/Instant class" />
+            <option value="$PROJECT_DIR$/Topics/Kotlinx datetime library/Leap Year" />
+            <option value="$PROJECT_DIR$/Topics/Kotlinx datetime library/Next Month" />
+            <option value="$PROJECT_DIR$/Topics/Kotlinx datetime library/Theory" />
+            <option value="$PROJECT_DIR$/Topics/Kotlinx datetime library/Using the kotlinx-datetime library" />
             <option value="$PROJECT_DIR$/util" />
           </set>
         </option>

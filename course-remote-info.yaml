@@ -3,7 +3,7 @@ hyperskill_project:
   ide_files: https://stepik.org/media/attachments/lesson/670908/additional_files.json
   is_template_based: false
   use_ide: true
-update_date: "Wed, 17 May 2023 17:58:26 UTC"
+update_date: "Thu, 15 Jun 2023 13:15:09 UTC"
 stages:
 - id: 1188
   step: 18594
@@ -13,7 +13,7 @@ stages:
   is_completed: true
 - id: 1190
   step: 18596
-  is_completed: false
+  is_completed: true
 - id: 1191
   step: 18597
   is_completed: false
@@ -149,10 +149,6 @@ topics:
   - title: Property accessors
     theory_id: 10511
   2:
-  - title: "Write, compile, and run"
-    theory_id: 3739
-  - title: "JVM, JRE, and JDK"
-    theory_id: 3499
   - title: Computer algorithms
     theory_id: 16547
   - title: The big O notation
@@ -161,6 +157,10 @@ topics:
     theory_id: 20084
   - title: Data structures
     theory_id: 16927
+  - title: "Write, compile, and run"
+    theory_id: 3739
+  - title: "JVM, JRE, and JDK"
+    theory_id: 3499
   - title: Introduction to Operating systems
     theory_id: 9704
   - title: Command line overview
