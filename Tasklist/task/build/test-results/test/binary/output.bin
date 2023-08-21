@@ -36,4 +36,557 @@
 > N
 Input the date (yyyy-mm-dd):
 > 2022-1-1
+Input the time (hh:mm):
+> 0:0
 .Input a new task (enter a blank line to end):
+> Happy new year!
+> 
+1Input an action (add, print, edit, delete, end):
+> end
+Tasklist exiting!
+[1;31m
+Start test 3[0m
+1Input an action (add, print, edit, delete, end):
+> add
+&Input the task priority (C, H, N, L):
+> N
+Input the date (yyyy-mm-dd):
+> 2021-2-29
+The input date is invalid
+Input the date (yyyy-mm-dd):
+> 2021-13-1
+The input date is invalid
+Input the date (yyyy-mm-dd):
+> 2021-12-32
+The input date is invalid
+Input the date (yyyy-mm-dd):
+
+> thisDay
+The input date is invalid
+Input the date (yyyy-mm-dd):
+>  
+The input date is invalid
+Input the date (yyyy-mm-dd):
+> 2022-1-1
+Input the time (hh:mm):
+> 0:0
+.Input a new task (enter a blank line to end):
+> Happy new year!
+> 
+1Input an action (add, print, edit, delete, end):
+> end
+Tasklist exiting!
+[1;31m
+Start test 4[0m
+1Input an action (add, print, edit, delete, end):
+> add
+&Input the task priority (C, H, N, L):
+> N
+Input the date (yyyy-mm-dd):
+> 2022-1-1
+Input the time (hh:mm):
+> 24:00
+The input time is invalid
+Input the time (hh:mm):
+> 12:60
+The input time is invalid
+Input the time (hh:mm):
+> 12.12
+The input time is invalid
+Input the time (hh:mm):
+> thisTime
+The input time is invalid
+Input the time (hh:mm):
+>  
+The input time is invalid
+Input the time (hh:mm):
+> 0:0
+.Input a new task (enter a blank line to end):
+> Happy new year!
+> 
+1Input an action (add, print, edit, delete, end):
+> end
+Tasklist exiting!
+[1;31m
+Start test 5[0m
+1Input an action (add, print, edit, delete, end):
+> add
+&Input the task priority (C, H, N, L):
+> N
+Input the date (yyyy-mm-dd):
+> 2022-1-1
+Input the time (hh:mm):
+> 0:0
+.Input a new task (enter a blank line to end):
+>      
+The task is blank
+1Input an action (add, print, edit, delete, end):
+> end
+Tasklist exiting!
+[1;31m
+Start test 6[0m
+1Input an action (add, print, edit, delete, end):
+> print
+No tasks have been input
+1Input an action (add, print, edit, delete, end):
+> edit
+No tasks have been input
+1Input an action (add, print, edit, delete, end):
+	> delete
+No tasks have been input
+1Input an action (add, print, edit, delete, end):
+> end
+Tasklist exiting!
+[1;31m
+Start test 7[0m
+1Input an action (add, print, edit, delete, end):
+> add
+&Input the task priority (C, H, N, L):
+> H
+Input the date (yyyy-mm-dd):
+> 2023-08-21
+Input the time (hh:mm):
+> 17:00
+.Input a new task (enter a blank line to end):
+> See my dentist
+> 
+1Input an action (add, print, edit, delete, end):
+> add
+&Input the task priority (C, H, N, L):
+> N
+Input the date (yyyy-mm-dd):
+> 2023-08-28
+Input the time (hh:mm):
+> 17:00
+.Input a new task (enter a blank line to end):
+> Cinema: get tickets
+> Check movie reviews
+> 
+1Input an action (add, print, edit, delete, end):
+> add
+&Input the task priority (C, H, N, L):
+> n
+Input the date (yyyy-mm-dd):
+> 2023-08-14
+Input the time (hh:mm):
+> 19:00
+.Input a new task (enter a blank line to end):
+> Supermarket
+> Chocolates
+> flour
+
+> oranges
+> 
+1Input an action (add, print, edit, delete, end):
+> add
+&Input the task priority (C, H, N, L):
+> l
+Input the date (yyyy-mm-dd):
+> 2023-08-28
+Input the time (hh:mm):
+> 12:00
+.Input a new task (enter a blank line to end):
+> Buy book
+> 
+1Input an action (add, print, edit, delete, end):
+> add
+&Input the task priority (C, H, N, L):
+> N
+Input the date (yyyy-mm-dd):
+> 2023-08-21
+Input the time (hh:mm):
+> 12:00
+.Input a new task (enter a blank line to end):
+> Check new software
+> 
+1Input an action (add, print, edit, delete, end):
+> add
+&Input the task priority (C, H, N, L):
+> C
+Input the date (yyyy-mm-dd):
+> 2023-08-14
+Input the time (hh:mm):
+> 16:00
+.Input a new task (enter a blank line to end):
+> Fill car tank
+> 
+1Input an action (add, print, edit, delete, end):
+> add
+&Input the task priority (C, H, N, L):
+> c
+Input the date (yyyy-mm-dd):
+> 2023-08-28
+Input the time (hh:mm):
+> 18:15
+.Input a new task (enter a blank line to end):
+> Pay phone bill
+> 
+1Input an action (add, print, edit, delete, end):
+> add
+&Input the task priority (C, H, N, L):
+> l
+Input the date (yyyy-mm-dd):
+> 2023-08-28
+Input the time (hh:mm):
+> 18:15
+.Input a new task (enter a blank line to end):
+> Pay water bill
+> 
+1Input an action (add, print, edit, delete, end):
+> add
+&Input the task priority (C, H, N, L):
+> L
+Input the date (yyyy-mm-dd):
+> 2023-08-14
+Input the time (hh:mm):
+> 08:05
+.Input a new task (enter a blank line to end):
+> Buy flowers
+> 
+1Input an action (add, print, edit, delete, end):
+> add
+&Input the task priority (C, H, N, L):
+> C
+Input the date (yyyy-mm-dd):
+> 2023-08-21
+Input the time (hh:mm):
+> 12:00
+.Input a new task (enter a blank line to end):
+> Fix printer
+> 
+1Input an action (add, print, edit, delete, end):
+> add
+&Input the task priority (C, H, N, L):
+> h
+Input the date (yyyy-mm-dd):
+> 2023-08-14
+Input the time (hh:mm):
+> 12:00
+.Input a new task (enter a blank line to end):
+> Change site
+> Use Christmas theme
+> 
+1Input an action (add, print, edit, delete, end):
+> add
+&Input the task priority (C, H, N, L):
+> l
+Input the date (yyyy-mm-dd):
+> 2023-08-28
+Input the time (hh:mm):
+> 12:00
+.Input a new task (enter a blank line to end):
+> Present for friend birthday
+> 
+1Input an action (add, print, edit, delete, end):
+> print
+1  2023-08-21 17:00 H T
+   See my dentist
+
+2  2023-08-28 17:00 N I
+   Cinema: get tickets
+   Check movie reviews
+
+3  2023-08-14 19:00 N O
+   Supermarket
+   Chocolates
+	   flour
+   oranges
+
+4  2023-08-28 12:00 L I
+   Buy book
+
+5  2023-08-21 12:00 N T
+   Check new software
+
+6  2023-08-14 16:00 C O
+   Fill car tank
+
+7  2023-08-28 18:15 C I
+   Pay phone bill
+
+8  2023-08-28 18:15 L I
+   Pay water bill
+
+9  2023-08-14 08:05 L O
+   Buy flowers
+
+10 2023-08-21 12:00 C T
+   Fix printer
+
+11 2023-08-14 12:00 H O
+   Change site
+   Use Christmas theme
+
+12 2023-08-28 12:00 L I
+   Present for friend birthday
+
+1Input an action (add, print, edit, delete, end):
+> end
+Tasklist exiting!
+[1;31m
+Start test 8[0m
+1Input an action (add, print, edit, delete, end):
+> add
+&Input the task priority (C, H, N, L):
+> H
+Input the date (yyyy-mm-dd):
+> 2023-08-21
+Input the time (hh:mm):
+> 17:00
+.Input a new task (enter a blank line to end):
+> See my dentist
+> 
+1Input an action (add, print, edit, delete, end):
+> add
+&Input the task priority (C, H, N, L):
+> N
+Input the date (yyyy-mm-dd):
+> 2023-08-28
+Input the time (hh:mm):
+> 17:00
+.Input a new task (enter a blank line to end):
+> Cinema: get tickets
+> Check movie reviews
+> 
+1Input an action (add, print, edit, delete, end):
+> add
+&Input the task priority (C, H, N, L):
+> n
+Input the date (yyyy-mm-dd):
+> 2023-08-14
+Input the time (hh:mm):
+> 19:00
+.Input a new task (enter a blank line to end):
+> Supermarket
+> Chocolates
+> flour
+
+> oranges
+> 
+1Input an action (add, print, edit, delete, end):
+> add
+&Input the task priority (C, H, N, L):
+> l
+Input the date (yyyy-mm-dd):
+> 2023-08-28
+Input the time (hh:mm):
+> 12:00
+.Input a new task (enter a blank line to end):
+> Buy book
+> 
+1Input an action (add, print, edit, delete, end):
+> print
+1  2023-08-21 17:00 H T
+   See my dentist
+
+2  2023-08-28 17:00 N I
+   Cinema: get tickets
+   Check movie reviews
+
+3  2023-08-14 19:00 N O
+   Supermarket
+   Chocolates
+	   flour
+   oranges
+
+4  2023-08-28 12:00 L I
+   Buy book
+
+1Input an action (add, print, edit, delete, end):
+	> delete
+1  2023-08-21 17:00 H T
+   See my dentist
+
+2  2023-08-28 17:00 N I
+   Cinema: get tickets
+   Check movie reviews
+
+3  2023-08-14 19:00 N O
+   Supermarket
+   Chocolates
+	   flour
+   oranges
+
+4  2023-08-28 12:00 L I
+   Buy book
+
+Input the task number (1-4):
+> 1
+The task is deleted
+1Input an action (add, print, edit, delete, end):
+	> delete
+1  2023-08-28 17:00 N I
+   Cinema: get tickets
+   Check movie reviews
+
+2  2023-08-14 19:00 N O
+   Supermarket
+   Chocolates
+	   flour
+   oranges
+
+3  2023-08-28 12:00 L I
+   Buy book
+
+Input the task number (1-3):
+> 2
+The task is deleted
+1Input an action (add, print, edit, delete, end):
+	> delete
+1  2023-08-28 17:00 N I
+   Cinema: get tickets
+   Check movie reviews
+
+2  2023-08-28 12:00 L I
+   Buy book
+
+Input the task number (1-2):
+> 2
+The task is deleted
+1Input an action (add, print, edit, delete, end):
+	> delete
+1  2023-08-28 17:00 N I
+   Cinema: get tickets
+   Check movie reviews
+
+Input the task number (1-1):
+> 1
+The task is deleted
+1Input an action (add, print, edit, delete, end):
+	> delete
+No tasks have been input
+1Input an action (add, print, edit, delete, end):
+> end
+Tasklist exiting!
+[1;31m
+Start test 9[0m
+1Input an action (add, print, edit, delete, end):
+> add
+&Input the task priority (C, H, N, L):
+> N
+Input the date (yyyy-mm-dd):
+> 2000-1-1
+Input the time (hh:mm):
+> 0:0
+.Input a new task (enter a blank line to end):
+> A new a task
+> 
+1Input an action (add, print, edit, delete, end):
+	> delete
+1  2000-01-01 00:00 N O
+   A new a task
+
+Input the task number (1-1):
+> 2
+Invalid task number
+Input the task number (1-1):
+> del
+Invalid task number
+Input the task number (1-1):
+> -1
+Invalid task number
+Input the task number (1-1):
+> 0
+Invalid task number
+Input the task number (1-1):
+> 1
+The task is deleted
+1Input an action (add, print, edit, delete, end):
+> end
+Tasklist exiting!
+[1;31m
+Start test 10[0m
+1Input an action (add, print, edit, delete, end):
+> add
+&Input the task priority (C, H, N, L):
+> N
+Input the date (yyyy-mm-dd):
+> 2000-1-1
+Input the time (hh:mm):
+> 0:0
+.Input a new task (enter a blank line to end):
+
+> My task
+> 
+1Input an action (add, print, edit, delete, end):
+> edit
+1  2000-01-01 00:00 N O
+   My task
+
+Input the task number (1-1):
+> 2
+Invalid task number
+Input the task number (1-1):
+> del
+Invalid task number
+Input the task number (1-1):
+> -1
+Invalid task number
+Input the task number (1-1):
+> 0
+Invalid task number
+Input the task number (1-1):
+> 1
+4Input a field to edit (priority, date, time, task):
+> priority
+&Input the task priority (C, H, N, L):
+> H
+The task is changed
+1Input an action (add, print, edit, delete, end):
+> edit
+1  2000-01-01 00:00 H O
+   My task
+
+Input the task number (1-1):
+> 1
+4Input a field to edit (priority, date, time, task):
+> date
+Input the date (yyyy-mm-dd):
+> 2001-2-2
+The task is changed
+1Input an action (add, print, edit, delete, end):
+> edit
+1  2001-02-02 00:00 H O
+   My task
+
+Input the task number (1-1):
+> 1
+4Input a field to edit (priority, date, time, task):
+> time
+Input the time (hh:mm):
+> 12:34
+The task is changed
+1Input an action (add, print, edit, delete, end):
+> edit
+1  2001-02-02 12:34 H O
+   My task
+
+Input the task number (1-1):
+> 1
+4Input a field to edit (priority, date, time, task):
+> task
+.Input a new task (enter a blank line to end):
+> My new task
+> 
+The task is changed
+1Input an action (add, print, edit, delete, end):
+> edit
+1  2001-02-02 12:34 H O
+   My new task
+
+Input the task number (1-1):
+> 1
+4Input a field to edit (priority, date, time, task):
+> my field
+Invalid field
+4Input a field to edit (priority, date, time, task):
+> tags
+Invalid field
+4Input a field to edit (priority, date, time, task):
+> time
+Input the time (hh:mm):
+> 3:21
+The task is changed
+1Input an action (add, print, edit, delete, end):
+> end
+Tasklist exiting!

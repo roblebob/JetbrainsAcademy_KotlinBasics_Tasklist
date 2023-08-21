@@ -6,9 +6,9 @@ import kotlinx.datetime.*
 fun main() {
     // write your code here
 
-    var line = ""
+    var line: String
     val tasks = mutableListOf<Task>()
-    outer@ while (true) {
+    while (true) {
         println("Input an action (add, print, edit, delete, end):")
         line = readln().trim()
 
@@ -18,13 +18,19 @@ fun main() {
                 val task = Task()
                 addPriority(task)
                 addDate(task)
+                addTime(task)
                 addLines(task)
                 tasks.add(task)
             }
             "edit" -> editTask(tasks)
             "print" -> printTasks(tasks)
             "delete" -> {
-                tasks.removeAt( selectIndex(tasks))
+                if (tasks.isEmpty()) {
+                    println("No tasks have been input")
+                    continue
+                }
+                printTasks(tasks)
+                tasks.removeAt(selectIndex(tasks))
                 println("The task is deleted")
             }
             else -> println("The input action is invalid")
@@ -48,8 +54,8 @@ data class Task (
     val dueTag : Char
         get() {
             val today = Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault()).date
-            val due = LocalDateTime.parse (date + "T" + time).date
-            return when (today.daysUntil(due)) {
+            val due = LocalDateTime.parse ("${date}T${time}:00").date
+            return when (due.daysUntil(today)) {
                 in Int.MIN_VALUE..-1 -> 'I'
                 0 -> 'T'
                 else -> 'O'
@@ -74,16 +80,21 @@ fun selectIndex(tasks: MutableList<Task>) : Int {
 
 fun editTask(tasks: MutableList<Task>) {
     while (true) {
+        if (tasks.isEmpty()) {
+            println("No tasks have been input")
+            return
+        }
+        printTasks(tasks)
         val task = tasks[ selectIndex(tasks)]
         while (true) {
-            println("Input the field name (priority, date, lines, time):")
+            println("Input a field to edit (priority, date, time, task):")
             when (readln().trim().lowercase()) {
                 "priority" -> addPriority(task)
                 "date" -> addDate(task)
-                "lines" -> addLines(task)
                 "time" -> addTime(task)
+                "task" -> addLines(task)
                 else -> {
-                    println("The input field is invalid")
+                    println("Invalid field")
                     continue
                 }
             }
@@ -91,6 +102,7 @@ fun editTask(tasks: MutableList<Task>) {
         }
         break
     }
+    println("The task is changed")
 }
 
 
@@ -101,7 +113,7 @@ fun addPriority(task: Task) {
         val string = readln().trim()
         if (string.lowercase() in listOf("c", "h", "n", "l")) {
             task.priority = string[0].uppercaseChar()
-            break;
+            break
         }
     }
 }
@@ -109,7 +121,19 @@ fun addPriority(task: Task) {
 fun addDate(task: Task) {
     while (true) {
         println("Input the date (yyyy-mm-dd):")
-        val dataStrings = readln().trim().split("-")
+
+        val input = readln().trim()
+        if (!"""\d{4}-\d+-\d+$""".toRegex().matches(input)) {
+
+            println("The input date is invalid")
+            continue
+
+            /*var s = Clock.System.now().toString()
+            s = s.substring(0, s.indexOf("T"))
+            task.time = s
+            break*/
+        }
+        val dataStrings = input.split("-")
         val year = dataStrings[0].toInt()
         val month = dataStrings[1].toInt()
         val day = dataStrings[2].toInt()
@@ -129,14 +153,28 @@ fun addDate(task: Task) {
 fun addTime(task: Task)  {
     while (true) {
         println("Input the time (hh:mm):")
-        val timeStrings = readln().trim().split(":")
+        val input = readln()
+
+        if (!"""\d{1,2}:\d{1,2}""".toRegex().matches(input)) {
+            println("The input time is invalid")
+            continue
+        }
+        val timeStrings = input
+            .trim()
+            .split(":")
+//            .stream()
+//            .map(String::trim)
+//            .collect(java.util.stream.Collectors.toList())
+
+
+        val timeStampString = task.date + "T" + (if (timeStrings[0].length == 1) "0" else "") + timeStrings[0] + ":" + (if (timeStrings[1].length == 1) "0" else "") + timeStrings[1] + ":00"
         val time = try {
-            LocalDateTime.parse (task.date + "T" + timeStrings[0] + ":" + timeStrings[1] + ":00")
+            LocalDateTime.parse (timeStampString)
         } catch (e: Exception) {
             println("The input time is invalid")
             continue
         }
-        task.time = "${time.hour}:${time.minute}"
+        task.time = "${String.format("%2s", time.hour.toString()).replace(' ', '0')}:${String.format("%2s", time.minute.toString()).replace(' ', '0')}"
         break
     }
 }
@@ -150,18 +188,16 @@ fun addTime(task: Task)  {
 
 fun addLines(task: Task) {
     val lines = mutableListOf<String>()
-
-    val condition = { l: List<String> -> l.isEmpty() || l.all { it.isBlank() } }
-    while (condition(lines)) {
-
-        println("Input a new task (enter a blank line to end):")
+    println("Input a new task (enter a blank line to end):")
+    do {
         val input = readln()
         if (input.isBlank() && lines.isEmpty()) {
             println("The task is blank")
-            continue
+            break
         }
         lines.add(input)
-    }
+    } while (lines.isEmpty() || lines.last().isNotBlank())
+    task.lines.clear()
     task.lines.addAll(lines)
 }
 
@@ -178,8 +214,8 @@ fun printTasks(tasks: List<Task>) {
             run {
                 val indexStr = "${index + 1}  ".subSequence(0, 3)
                 println("$indexStr${task.date} ${task.time} ${task.priority} ${task.dueTag}")
-                task.lines.forEach { line -> println("   $line") }
-                println()
+                task.lines.forEach { line -> println(if (line.isNotBlank()) "   $line" else "") }
+                //println()
             }
         }
     }
