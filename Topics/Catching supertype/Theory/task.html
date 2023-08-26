@@ -1,0 +1,65 @@
+<h2>Catching supertype</h2>
+<div class="step-text">
+<p>Previously, we discussed the <strong>hierarchy of exceptions</strong>. This understanding will be useful when it comes to <strong>catching multiple exceptions</strong> and handling <strong>supertypes</strong> as we will see in this topic, which will prepare you to handle exceptions like a pro.</p>
+<h5 id="catching-multiple-exceptions">Catching multiple exceptions</h5>
+<p>Imagine a situation where you encounter different types of exceptions and want to handle them differently. The straightforward approach is to use separate catch blocks for each exception. Let's consider the following example:</p>
+<pre><code class="language-kotlin">fun main() {
+    val input = readln()
+    try {
+        println(100 / input.toInt())
+    } catch (e: Exception) {
+        println("What else can go wrong!")
+    } catch (e: NumberFormatException) {
+        println("You didn't type an INT number!")
+    } catch (e: ArithmeticException) {
+        println("You typed 0!")
+    }
+}</code></pre>
+<p>In this example, we attempt to divide the number 100 by the user input. We have specific handling for each exception type. However, if we input a non-numeric character, the code will print:</p>
+<pre><code class="language-no-highlight">"What else can go wrong!" // This is what we will get</code></pre>
+<p>Meanwhile, the output we we were expecting is:</p>
+<pre><code class="language-no-highlight">"You didn't type an INT number!" // This won't be displayed!</code></pre>
+<p>That happens because when dealing with multiple catch blocks, if a <strong>supertype</strong> exception is <strong>caught first</strong>, all subsequent exceptions inheriting from it will be ignored. Hence, the catch block for <code class="language-kotlin">Exception</code> will handle all exceptions, resulting in unexpected behavior. Therefore, regardless of the input (non-numeric or zero), only the body of the <code class="language-kotlin">catch(e: Exception)</code> block will be executed.</p>
+<h5 id="order-matters">Order matters</h5>
+<p>To achieve the desired output, we need to order the catch blocks appropriately:</p>
+<pre><code class="language-kotlin">fun main() {
+    val input = readln()
+    try {
+        println(100 / input.toInt())
+    } catch (e: NumberFormatException) {
+        println("You didn't type an INT number!")
+    } catch (e: ArithmeticException) {
+        println("You typed 0!")
+    } catch (e: Exception) {
+        println("What else can go wrong!")
+    }
+}</code></pre>
+<p>By rearranging the catch blocks and placing the more specific exceptions first, we ensure that the corresponding catch block executes correctly. Now, if we run the code and input different values, we'll get the expected outputs:</p>
+<p></p><div class="alert alert-primary">Lines starting with <code class="language-kotlin">&gt; </code> mean input</div>
+<pre><code class="language-no-highlight">&gt; 0
+You typed 0!
+&gt; 100
+1
+&gt; Hello!
+You didn't type an INT number!</code></pre>
+<h5 id="catching-all-in-one">Catching all in one</h5>
+<p>In Kotlin, the <code class="language-kotlin">when</code> statement can help us with writing a more concise code to catch multiple exceptions in a single catch block:</p>
+<pre><code class="language-kotlin">fun main() {
+    val input = readln()
+    try {
+        println(100 / input.toInt())
+    } catch (e: Exception) {
+        when (e) {
+            is NumberFormatException -&gt; println("You didn't type an INT number!")
+            is ArithmeticException -&gt; println("You typed 0!")
+            else -&gt; println("What else can go wrong!")
+        }
+    }
+}</code></pre>
+<p>Notice that even when using the <code class="language-kotlin">when</code> statement, you still have to order the catch blocks correctly so that the more specific ones are always handled first.</p>
+<h5 id="catching-the-exception-type">Catching the "Exception" type</h5>
+<p>You might be wondering why we should handle a general type if we have already handled all the specific ones. Can't we just remove the catch block for the <code class="language-kotlin">Exception</code> type? The answer is: such an approach can lead to problems.</p>
+<p>It is always considered a best practice to catch the supertype <code class="language-kotlin">Exception</code> when handling multiple exceptions. It helps us gracefully handle unknown or unexpected exceptions. Sometimes, our code might encounter exceptions that we didn't anticipate. By catching the supertype, we can handle such exceptions without causing our program to crash or behave unpredictably.</p>
+<h5 id="conclusion">Conclusion</h5>
+<p>In this topic, you've learned how to correctly handle multiple exceptions by ordering them from more to less specific. You've also learned about the importance of handling the supertype in any try-catch block. Now it's time to practice what you've learned.</p>
+</div>

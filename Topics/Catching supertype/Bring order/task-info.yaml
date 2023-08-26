@@ -1,0 +1,29 @@
+type: code
+files:
+  - name: src/Main.kt
+    visible: true
+    text: |-
+      fun main() {
+          val input = readln()
+          try {
+              println(100 / input.toInt())
+          } catch (e: Exception) {
+              println("An unknown error has occurred!")
+          } catch (e: NumberFormatException) {
+              println("You did not enter a valid integer!")
+          } catch (e: ArithmeticException) {
+              println("You cannot divide by zero!")
+          }
+      }
+    learner_created: false
+feedback_link: https://hyperskill.org/learn/step/31362#comment
+status: Solved
+feedback:
+  message: |-
+    <html>[+] Test #1. OK
+    [+] Test #2. OK
+
+    2 of 2 test(s) passed.</html>
+  time: "Sat, 26 Aug 2023 12:52:17 UTC"
+record: -1
+submission_language: kotlin

@@ -1,4 +1,9 @@
-type: theory
+type: sorting
+options:
+  - <code>B</code>
+  - <code>C</code>
+  - <code>A</code>
+  - <code>Exception</code>
 files:
   - name: src/Main.kt
     visible: true
@@ -9,7 +14,11 @@ files:
         // put your code here
       }
     learner_created: false
-feedback_link: https://hyperskill.org/learn/step/4657#comment
+feedback_link: https://hyperskill.org/learn/step/31361#comment
 status: Solved
 record: -1
-post_submission_on_open: true
+ordering:
+  - 0
+  - 1
+  - 2
+  - 3

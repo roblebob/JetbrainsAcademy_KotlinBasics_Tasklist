@@ -20,6 +20,18 @@
       <module name="JetbrainsAcademy_KotlinBasics_Tasklist.Tasklist-task-build-tmp.test" target="17" />
       <module name="JetbrainsAcademy_KotlinBasics_Tasklist.Tasklist-task.main" target="17" />
       <module name="JetbrainsAcademy_KotlinBasics_Tasklist.Tasklist-task.test" target="17" />
+      <module name="JetbrainsAcademy_KotlinBasics_Tasklist.Topics-Catching_supertype-Arrange_exceptions" target="17" />
+      <module name="JetbrainsAcademy_KotlinBasics_Tasklist.Topics-Catching_supertype-Arrange_exceptions.main" target="17" />
+      <module name="JetbrainsAcademy_KotlinBasics_Tasklist.Topics-Catching_supertype-Arrange_exceptions.test" target="17" />
+      <module name="JetbrainsAcademy_KotlinBasics_Tasklist.Topics-Catching_supertype-Bring_order" target="17" />
+      <module name="JetbrainsAcademy_KotlinBasics_Tasklist.Topics-Catching_supertype-Bring_order.main" target="17" />
+      <module name="JetbrainsAcademy_KotlinBasics_Tasklist.Topics-Catching_supertype-Bring_order.test" target="17" />
+      <module name="JetbrainsAcademy_KotlinBasics_Tasklist.Topics-Catching_supertype-Statements" target="17" />
+      <module name="JetbrainsAcademy_KotlinBasics_Tasklist.Topics-Catching_supertype-Statements.main" target="17" />
+      <module name="JetbrainsAcademy_KotlinBasics_Tasklist.Topics-Catching_supertype-Statements.test" target="17" />
+      <module name="JetbrainsAcademy_KotlinBasics_Tasklist.Topics-Catching_supertype-Theory" target="17" />
+      <module name="JetbrainsAcademy_KotlinBasics_Tasklist.Topics-Catching_supertype-Theory.main" target="17" />
+      <module name="JetbrainsAcademy_KotlinBasics_Tasklist.Topics-Catching_supertype-Theory.test" target="17" />
       <module name="JetbrainsAcademy_KotlinBasics_Tasklist.Topics-For_loop_and_arrays-Is_it_here" target="17" />
       <module name="JetbrainsAcademy_KotlinBasics_Tasklist.Topics-For_loop_and_arrays-Is_it_here.main" target="17" />
       <module name="JetbrainsAcademy_KotlinBasics_Tasklist.Topics-For_loop_and_arrays-Is_it_here.test" target="17" />
