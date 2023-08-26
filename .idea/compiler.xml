@@ -1,6 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel target="19" />
+    <bytecodeTargetLevel target="19">
+      <module name="DateTimePeriod class.JetbrainsAcademy_KotlinBasics_Tasklist.Topics-Kotlinx_datetime_library-DateTimePeriod_class" target="17" />
+      <module name="DateTimePeriod class.JetbrainsAcademy_KotlinBasics_Tasklist.Topics-Kotlinx_datetime_library-DateTimePeriod_class.main" target="17" />
+      <module name="DateTimePeriod class.JetbrainsAcademy_KotlinBasics_Tasklist.Topics-Kotlinx_datetime_library-DateTimePeriod_class.test" target="17" />
+      <module name="JetbrainsAcademy_KotlinBasics_Tasklist.Tasklist-task" target="17" />
+      <module name="JetbrainsAcademy_KotlinBasics_Tasklist.Tasklist-task-build-classes-kotlin" target="17" />
+      <module name="JetbrainsAcademy_KotlinBasics_Tasklist.Tasklist-task-build-classes-kotlin.main" target="17" />
+      <module name="JetbrainsAcademy_KotlinBasics_Tasklist.Tasklist-task-build-classes-kotlin.test" target="17" />
+      <module name="JetbrainsAcademy_KotlinBasics_Tasklist.Tasklist-task-build-reports-tests" target="17" />
+      <module name="JetbrainsAcademy_KotlinBasics_Tasklist.Tasklist-task-build-reports-tests.main" target="17" />
+      <module name="JetbrainsAcademy_KotlinBasics_Tasklist.Tasklist-task-build-reports-tests.test" target="17" />
+      <module name="JetbrainsAcademy_KotlinBasics_Tasklist.Tasklist-task-build-test-results" target="17" />
+      <module name="JetbrainsAcademy_KotlinBasics_Tasklist.Tasklist-task-build-test-results.main" target="17" />
+      <module name="JetbrainsAcademy_KotlinBasics_Tasklist.Tasklist-task-build-test-results.test" target="17" />
+      <module name="JetbrainsAcademy_KotlinBasics_Tasklist.Tasklist-task-build-tmp" target="17" />
+      <module name="JetbrainsAcademy_KotlinBasics_Tasklist.Tasklist-task-build-tmp.main" target="17" />
+      <module name="JetbrainsAcademy_KotlinBasics_Tasklist.Tasklist-task-build-tmp.test" target="17" />
+      <module name="JetbrainsAcademy_KotlinBasics_Tasklist.Tasklist-task.main" target="17" />
+      <module name="JetbrainsAcademy_KotlinBasics_Tasklist.Tasklist-task.test" target="17" />
+      <module name="JetbrainsAcademy_KotlinBasics_Tasklist.Topics-For_loop_and_arrays-Is_it_here" target="17" />
+      <module name="JetbrainsAcademy_KotlinBasics_Tasklist.Topics-For_loop_and_arrays-Is_it_here.main" target="17" />
+      <module name="JetbrainsAcademy_KotlinBasics_Tasklist.Topics-For_loop_and_arrays-Is_it_here.test" target="17" />
+      <module name="JetbrainsAcademy_KotlinBasics_Tasklist.Topics-For_loop_and_arrays-Theory" target="17" />
+      <module name="JetbrainsAcademy_KotlinBasics_Tasklist.Topics-For_loop_and_arrays-Theory.main" target="17" />
+      <module name="JetbrainsAcademy_KotlinBasics_Tasklist.Topics-For_loop_and_arrays-Theory.test" target="17" />
+      <module name="JetbrainsAcademy_KotlinBasics_Tasklist.Topics-Kotlinx_datetime_library-Instant_class" target="17" />
+      <module name="JetbrainsAcademy_KotlinBasics_Tasklist.Topics-Kotlinx_datetime_library-Instant_class.main" target="17" />
+      <module name="JetbrainsAcademy_KotlinBasics_Tasklist.Topics-Kotlinx_datetime_library-Instant_class.test" target="17" />
+      <module name="JetbrainsAcademy_KotlinBasics_Tasklist.Topics-Kotlinx_datetime_library-Next_Month" target="17" />
+      <module name="JetbrainsAcademy_KotlinBasics_Tasklist.Topics-Kotlinx_datetime_library-Next_Month.main" target="17" />
+      <module name="JetbrainsAcademy_KotlinBasics_Tasklist.Topics-Kotlinx_datetime_library-Next_Month.test" target="17" />
+      <module name="JetbrainsAcademy_KotlinBasics_Tasklist.Topics-Kotlinx_datetime_library-Theory" target="17" />
+      <module name="JetbrainsAcademy_KotlinBasics_Tasklist.Topics-Kotlinx_datetime_library-Theory.main" target="17" />
+      <module name="JetbrainsAcademy_KotlinBasics_Tasklist.Topics-Kotlinx_datetime_library-Theory.test" target="17" />
+      <module name="JetbrainsAcademy_KotlinBasics_Tasklist.Topics-Kotlinx_datetime_library-Using_the_kotlinx-datetime_library" target="17" />
+      <module name="JetbrainsAcademy_KotlinBasics_Tasklist.Topics-Kotlinx_datetime_library-Using_the_kotlinx-datetime_library.main" target="17" />
+      <module name="JetbrainsAcademy_KotlinBasics_Tasklist.Topics-Kotlinx_datetime_library-Using_the_kotlinx-datetime_library.test" target="17" />
+      <module name="JetbrainsAcademy_KotlinBasics_Tasklist.util" target="17" />
+      <module name="JetbrainsAcademy_KotlinBasics_Tasklist.util.main" target="17" />
+      <module name="JetbrainsAcademy_KotlinBasics_Tasklist.util.test" target="17" />
+      <module name="Leap Year.JetbrainsAcademy_KotlinBasics_Tasklist.Topics-Kotlinx_datetime_library-Leap_Year" target="17" />
+      <module name="Leap Year.JetbrainsAcademy_KotlinBasics_Tasklist.Topics-Kotlinx_datetime_library-Leap_Year.main" target="17" />
+      <module name="Leap Year.JetbrainsAcademy_KotlinBasics_Tasklist.Topics-Kotlinx_datetime_library-Leap_Year.test" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>

@@ -41,7 +41,7 @@
       </configuration>
     </facet>
   </component>
-  <component name="NewModuleRootManager">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_17">
     <output-test url="file://$MODULE_DIR$/../../../../../../Tasklist/task/build/test-results/out/test/classes" />
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../../../../../Tasklist/task/build/test-results/src/test" />

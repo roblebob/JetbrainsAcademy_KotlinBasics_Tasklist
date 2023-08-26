@@ -1,13 +1,29 @@
 package tasklist
 
 import kotlinx.datetime.*
-
+import com.squareup.moshi.*
+import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
+import java.io.File
 
 fun main() {
-    // write your code here
+    // reading json file if it exits
+    val jsonFile = File("tasklist.json")
+    val moshi = Moshi.Builder().add(KotlinJsonAdapterFactory()).build()
+    val type = Types.newParameterizedType(List::class.java, Task::class.java)
+    val adapter = moshi.adapter<List<Task?>>(type)
+
+    val tasks : MutableList<Task> = if (jsonFile.exists()) {
+
+        val json = jsonFile.readText()
+        adapter.fromJson(json)?.filterNotNull()?.toMutableList() ?: mutableListOf()
+    } else {
+        mutableListOf()
+    }
+
+
 
     var line: String
-    val tasks = mutableListOf<Task>()
+
     while (true) {
         println("Input an action (add, print, edit, delete, end):")
         line = readln().trim()
@@ -37,6 +53,7 @@ fun main() {
         }
     }
     println("Tasklist exiting!")
+    jsonFile.writeText(adapter.toJson(tasks))
 }
 
 
@@ -209,15 +226,72 @@ fun addLines(task: Task) {
 fun printTasks(tasks: List<Task>) {
     if (tasks.isEmpty()) {
         println("No tasks have been input")
-    } else {
-        tasks.forEachIndexed { index, task ->
-            run {
-                val indexStr = "${index + 1}  ".subSequence(0, 3)
-                println("$indexStr${task.date} ${task.time} ${task.priority} ${task.dueTag}")
-                task.lines.forEach { line -> println(if (line.isNotBlank()) "   $line" else "") }
-                //println()
+        return
+    }
+
+
+    var output ="+----+------------+-------+---+---+--------------------------------------------+\n" +
+            "| N  |    Date    | Time  | P | D |                   Task                     |\n" +
+            "+----+------------+-------+---+---+--------------------------------------------+\n"
+
+
+
+
+
+    tasks.forEachIndexed { index, task ->
+        run {
+            val indexStr = "${index + 1} ".subSequence(0, 2)
+
+            val newLines = mutableListOf<String>()
+            task.lines.forEach { s ->
+                var string = s
+                while (string.length > 44) {
+                    newLines.add(string.substring(0, 44))
+                    string = string.substring(44)
+                }
+                newLines.add(string)
             }
+            task.lines.clear()
+            task.lines.addAll(newLines)
+
+
+
+
+            output += "| $indexStr | ${task.date} | ${task.time} | ${printPriority( task)} | ${printDueTag( task)} |${printLine(task.lines.first())}|\n"
+            task.lines.drop(1).dropLast(1). forEach { line ->
+                output += "|    |            |       |   |   |${printLine(line)}|\n"
+            }
+            output += "+----+------------+-------+---+---+--------------------------------------------+\n"
         }
+    }
+
+
+
+
+    print(output)
+}
+
+
+
+fun printLine(s: String): String {
+    return (s + " ".repeat(44)).substring(0, 44)
+}
+
+fun printDueTag(task: Task): String {
+    return when (task.dueTag) {
+        'I' -> "\u001B[102m \u001B[0m"
+        'T' -> "\u001B[103m \u001B[0m"
+        'O' -> "\u001B[101m \u001B[0m"
+        else -> "?"
     }
 }
 
+fun printPriority(task: Task): String {
+    return when (task.priority) {
+        'C' -> "\u001B[101m \u001B[0m"
+        'H' -> "\u001B[103m \u001B[0m"
+        'N' -> "\u001B[102m \u001B[0m"
+        'L' -> "\u001B[104m \u001B[0m"
+        else -> "?"
+    }
+}
